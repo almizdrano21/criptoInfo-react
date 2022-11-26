@@ -1,9 +1,23 @@
-import { useState } from "react";
 import styled from "@emotion/styled";
 import ImagenCripto from "./img/imagen-criptos.png";
+import Formulario from "./components/Formulario";
 const Heading = styled.h1`
   font-family: "Lato", sans-serif;
   color: white;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-size: 34px;
+
+  &::after {
+    content: "";
+    width: 100px;
+    height: 6px;
+    background-color: #66a2fe;
+    display: block;
+    margin: 10px auto 0 auto;
+  }
 `;
 const Contenedor = styled.div`
   max-width: 900px;
@@ -27,6 +41,7 @@ function App() {
       <Imagen src={ImagenCripto} alt={"Imagenes criptomonedas"} />
       <div>
         <Heading>Desde app</Heading>
+        <Formulario />
       </div>
     </Contenedor>
   );
